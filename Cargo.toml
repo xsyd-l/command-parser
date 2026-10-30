@@ -2,5 +2,8 @@
 name = "clio"
 version = "0.1.0"
 edition = "2024"
+license = "MIT"
+discription = "use the crate to deal with cli input."
+repositry = "https://github.com/xsyd-l/clio.git"
 
 [dependencies]
