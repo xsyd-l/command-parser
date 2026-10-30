@@ -1,7 +1,7 @@
-# clio
+# command-parser
 
-`clio` is a small Rust library for parsing command-line arguments into
-subcommands, options, positional values, and option values.
+`command-parser` is a small Rust library for parsing command-line arguments
+into an optional subcommand, options, positional values, and option values.
 
 ## Usage
 
@@ -9,14 +9,14 @@ Add the crate to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-clio = { git = "https://github.com/xsyd-l/clio.git" }
+command-parser = { git = "https://github.com/xsyd-l/command-parser.git" }
 ```
 
 Pass the process arguments (including the executable name) to `Args::from`.
 List the short options that take a value in `config_options`:
 
 ```rust
-use clio::Args;
+use command_parser::Args;
 
 fn main() {
     let args = std::env::args().collect();
