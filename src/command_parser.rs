@@ -49,4 +49,19 @@ impl Args {
         }
         return Some(Args { configs, subcommand, long_options, short_options, config_options:config_options_map});
     }
+
+    pub fn contains_option(&self, option: &str) -> bool {
+        let mut result = false;
+        for opt in &self.long_options {
+            if opt.as_str() == option {
+                result = true;
+            }
+        }
+        for opt in &self.short_options {
+            if opt.as_str() == option {
+                result = true;
+            }
+        }
+        result
+    }
 }
